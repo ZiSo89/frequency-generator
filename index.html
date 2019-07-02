@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js and P5.js</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+                <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+                <section data-markdown="slides.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+
+                <!-- Element attributes -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Element attributes
+                        - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
+                        - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
+                    </script>
+                </section>
+
+            </div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+	
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: false,
+				center: true,
+				width: 800,
+				height: 480,
+				margin: 0,
+                                touch: true,
+
+				// Transition style
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+	
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/notes/notes.js' },
+					{ src: 'lib/p5/p5.js' },
+					{ src: 'https://cdn.socket.io/socket.io-1.3.5.js' },
+					{ src: 'lib/p5/p5.dom.js' },
+					{ src: 'lib/p5/p5bots.js' },
+					{ src: 'lib/p5/p5.sound.js' },
+					{ src: 'lib/p5/p5bots_analog.js' },
+					{ src: 'lib/p5/p5bots_encoder.js' },
+					{ src: 'lib/p5/virtualEncoder.js' },
+                    { src: 'p5sketch.js' }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
