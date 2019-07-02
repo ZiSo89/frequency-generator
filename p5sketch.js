@@ -23,7 +23,7 @@ var sketch = function (p) {
   var enc = new encoder(2, 3, b);
   var encV = new virtualEncoder(canvasHeight / 2, canvasWidth - 80, p);
 
-  var resolution = 63; //Cycles Per Revolution
+  var resolution = 20; //Cycles Per Revolution
   var encPosLast = 0;
   var encStepDegr = 0;
   var encStepFreq = 0;
